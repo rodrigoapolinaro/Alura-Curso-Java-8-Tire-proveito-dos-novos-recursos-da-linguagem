@@ -27,7 +27,7 @@ public class OrdenaString {
 		//palavras.sort((s1, s2) -> Integer.compare(s1.length(), s2.length()));
 		
 		palavras.sort(Comparator.comparing(s -> s.length()));
-		palavras.sort(comparing(String.CASE_INSENSITIVE_ORDER));
+		palavras.sort(comparing(String::length));
 		
 		Function<String, Integer> funcao = String::length;
 		Function<String, Integer> funcao2 = s -> s.length();
